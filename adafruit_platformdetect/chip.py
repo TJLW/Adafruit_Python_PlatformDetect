@@ -91,6 +91,9 @@ class Chip:
                 linux_id = chips.S922X
             if compatible and 'sun50i-a64' in compatible:
                 linux_id = chips.A64
+            if compatible and 'xlnx,zynqmp' in compatible:
+                linux_id = chips.ZYNQMP
+
 
             cpu_model = self.detector.get_cpuinfo_field("cpu model")
 
@@ -131,9 +134,6 @@ class Chip:
                 compatible = self.detector.get_device_compatible()
                 if compatible and 'xlnx,zynq-7000' in compatible:
                     linux_id = chips.ZYNQ7000
-            elif "avnet,ultra96" in hardware:
-                if compatible and 'xlnx,zynqmp' in compatible:
-                    linux_id = chips.ZYNQMP
             else:
                 if isinstance(hardware, str):
                     if hardware.upper() in chips.BCM_RANGE:

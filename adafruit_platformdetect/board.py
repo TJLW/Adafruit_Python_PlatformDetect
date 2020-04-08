@@ -71,6 +71,8 @@ class Board:
             board_id = boards.ONION_OMEGA2
         elif chip_id == chips.ZYNQ7000:
             board_id = self._pynq_id()
+        elif chip_id == chips.ZYNQMP:
+            board_id = self._pynq_id()
         elif chip_id == chips.A64:
             board_id = self._pine64_id()
         return board_id

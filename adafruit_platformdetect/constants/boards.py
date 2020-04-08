@@ -48,7 +48,7 @@ PYNQ_Z1 = "PYNQ_Z1"
 PYNQ_Z2 = "PYNQ_Z2"
 
 # Avnet Ultra96 ZYNQMP FPGA dev board
-ULTRA96_V2 = "ULTRA96_V2"
+ULTRA96 = "ULTRA96"
 
 # Various Raspberry Pi models
 RASPBERRY_PI_B_REV1 = "RASPBERRY_PI_B_REV1"
@@ -109,6 +109,7 @@ _CORAL_IDS = (
 _PYNQ_IDS = (
     PYNQ_Z1,
     PYNQ_Z2,
+    ULTRA96,
 )
 
 _JETSON_IDS = {

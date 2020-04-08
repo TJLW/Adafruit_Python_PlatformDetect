@@ -34,6 +34,9 @@ if detector.board.any_jetson_board:
 if detector.board.any_pynq_board:
     print("PYNQ platform detected.")
 
+if detector.board.any_96boards:
+    print("Pine64 device detected.")
+
 if detector.board.any_orange_pi:
     print("Orange Pi detected.")
 

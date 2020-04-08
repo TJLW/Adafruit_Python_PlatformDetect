@@ -35,7 +35,7 @@ if detector.board.any_pynq_board:
     print("PYNQ platform detected.")
 
 if detector.board.any_96boards:
-    print("Pine64 device detected.")
+    print("96 boards platform detected.")
 
 if detector.board.any_orange_pi:
     print("Orange Pi detected.")

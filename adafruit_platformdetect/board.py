@@ -71,10 +71,10 @@ class Board:
             board_id = boards.ONION_OMEGA2
         elif chip_id == chips.ZYNQ7000:
             board_id = self._pynq_id()
-        elif chip_id == chips.ZYNQMP:
-            board_id = self._pynq_id()
         elif chip_id == chips.A64:
             board_id = self._pine64_id()
+        elif chip_id == chips.ZYNQMP:
+            board_id = self._zynqmp_id()
         return board_id
 
     # pylint: enable=invalid-name
@@ -236,6 +236,14 @@ class Board:
             board = boards.PINEBOOK
         elif 'pinephone' in board_value.lower():
             board = boards.PINEPHONE
+        return board
+
+    def _zynqmp_id(self):
+        """Try to detect the id for ZynqMP board or device."""
+        board_value = self.detector.get_device_model()
+        board = None
+        if 'Ultra96' in board_value.lower():
+            board = boards.ULTRA96
         return board
 
     # pylint: disable=no-self-use

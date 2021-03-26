@@ -242,7 +242,7 @@ class Board:
         """Try to detect the id for ZynqMP board or device."""
         board_value = self.detector.get_device_model()
         board = None
-        if 'Ultra96' in board_value.lower():
+        if 'Ultra96' in board_value:
             board = boards.ULTRA96
         return board
 
